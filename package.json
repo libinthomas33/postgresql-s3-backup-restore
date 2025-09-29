@@ -1,0 +1,43 @@
+{
+  "name": "postgresql-s3-backup-restore",
+  "version": "1.0.0",
+  "description": "PostgreSQL database backup and restore scripts with AWS S3 integration. Efficiently handles large datasets by processing data in batches, compressing backups, and providing reliable restoration capabilities.",
+  "main": "delete_backup.js",
+  "scripts": {
+    "backup": "node delete_backup.js",
+    "restore": "node restore.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "postgresql",
+    "postgres",
+    "backup",
+    "restore",
+    "aws-s3",
+    "database",
+    "csv",
+    "compression",
+    "batch-processing"
+  ],
+  "author": "Libin",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.712.0",
+    "aws-sdk": "^2.1692.0",
+    "csv-parse": "^5.6.0",
+    "csv-parser": "^3.0.0",
+    "csv-writer": "^1.6.0",
+    "dotenv": "^16.4.7",
+    "moment": "^2.30.1",
+    "p-limit": "^6.2.0",
+    "pg": "^8.13.1",
+    "pg-copy-streams": "^6.0.6",
+    "readline": "^1.3.0",
+    "request-promise-native": "^1.0.9"
+  },
+  "type": "module"
+}
